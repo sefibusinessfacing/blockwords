@@ -22,11 +22,6 @@ window.addEventListener('beforeunload', function(event) {
 		}
 		
 });
-/*window.addEventListener('unload', function(event) {
-        console.log('id=' + localStorage.getItem("id"));
-		console.log('value_unload=' + document.getElementById(id).value);
-});
-*/
 
 	
 chrome.runtime.onMessage.addListener(
@@ -50,31 +45,11 @@ chrome.runtime.onMessage.addListener(
 			}
 	 }
 	
-	/*
-	//alert('content listener ');
-    if (request.greeting == "hello"){
-	  var id = localStorage.getItem("id");
-	  //alert('id = ' + id);
-	  var value = document.getElementById(id).value;	
-	  if ( value == "Go" || value == null){
-	    value = localStorage.getItem("value");
-		//alert('value = ' + value);
-	  }	  
-	  //alert('value = ' + value);
-      sendResponse({farewell: value});
-	  }
-	  */
   });  
  
  
  
 function monitorInputFieldChange() {	
-	//window.addEventListener('keyup', function (e) {
-	//	if (e.keyCode === 13) {
-	//		window.alert('enter = ' + keyword);
-	//	   }
-	//}, false);	
-
 	
     var fields = document.getElementsByTagName('input');
     for (var f = 0; f < fields.length; f++) {
@@ -93,6 +68,5 @@ function monitorInputFieldChange() {
 	
     }
 }
-
 
 monitorInputFieldChange();
